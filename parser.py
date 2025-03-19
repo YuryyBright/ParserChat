@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 from telethon import TelegramClient, events
 from telethon.errors import ChatAdminRequiredError
 from telethon.tl.functions.channels import GetParticipantsRequest
@@ -172,9 +173,9 @@ class TelegramClientFactory:
 
 
 async def main():
-    # Отримання даних з середовища
-    API_ID = int(os.environ.get('TELEGRAM_API_ID', 0))
-    API_HASH = os.environ.get('TELEGRAM_API_HASH', '')
+    load_dotenv()
+    API_ID = int(os.getenv('TELEGRAM_API_ID', 0))
+    API_HASH = os.getenv('TELEGRAM_API_HASH', '')
     if not API_ID or not API_HASH:
         logger.error("Не вказано необхідні параметри. Встановіть змінні середовища.")
         return
