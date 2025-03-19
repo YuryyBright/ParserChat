@@ -1,5 +1,3 @@
-Sure! Here's the `README.md` formatted in a GitHub style for better readability:
-
 ```markdown
 # Telegram Chat Participant Parser
 
