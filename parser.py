@@ -223,4 +223,4 @@ async def main():
 if __name__ == "__main__":
     # Запуск головної функції
     asyncio.run(main())
-    # +380994792006
+
